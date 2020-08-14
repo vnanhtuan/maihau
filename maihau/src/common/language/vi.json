@@ -1,0 +1,63 @@
+﻿{
+	"common": {
+		"action_completed": "Thực hiện thành công",
+		"action_confirm": "Bạn chắc chắn muốn thực hiện?",
+		"action_error": "Đã có lỗi xảy ra",
+		"delete_confirm": "Bạn chắc chắn muốn xóa?",
+		"ban_confirm": "Bạn chắc chắn muốn cấm truy cập?",
+		"remove_ban_confirm": "Bạn chắc chắn muốn cho phép truy cập?",
+		"OK": "Đồng ý",
+		"cancel": "Từ chối",
+		"close": "Đóng",
+		"name_empty": "Vui lòng nhập tên",
+		"fullName_empty": "Vui lòng nhập họ tên",
+		"email_empty": "Vui lòng nhập email",
+		"title_empty": "Vui lòng nhập tiêu đề",
+		"content_empty": "Vui lòng nhập nội dung",
+		"deny_robot": "Robot không được thực hiện hành động này",
+		"category_empty": "Vui lòng chọn danh mục",
+		"parent_empty": "Vui lòng chọn danh mục cha",
+		"not_exists": "Không tìm thấy",
+		"value_empty": "Vui lòng nhập giá trị",
+		"value_over": "Giá trị vượt quá mức tối đa",
+		"value_min": "Giá trị thấp hơn mức tối thiểu",
+		"wallet_empty": "Vui lòng chọn ví",
+		"wallet_notenough": "Ví không đủ",
+		"primarywallet_notenough": "Ví HelpPay không đủ",
+		"btc_address_invalid": "Bitcoin address không đúng",
+		"user_notfound": "Không tìm thấy thành viên",
+		"verificationCode_incorrect": "Mã xác thực không đúng",
+		"order_empty": "Vui lòng chọn vị trí"
+	},
+	"login": {
+		"info_incorrect": "Thông tin đăng nhập không đúng"
+	},
+	"forgetPassword": {
+		"info_incorrect": "Thông tin không đúng"
+	},
+	"register": {
+		"memberType_empty": "Vui lòng nhập chọn loại dịch vụ",
+		"userName_invalid": "Ít nhất 6 đến 20 ký tự",
+		"userName_taken": "Tên đăng nhập đã dược sử dụng",
+		"email_invalid": "Email không hợp lệ",
+		"email_taken": "Email đã dược sử dụng",
+		"password_invalid": "Mật khẩu không hợp lệ",
+		"confirmPassword_incorrect": "Xác nhận mật khẩu không đúng",
+		"sponsorName_empty": "Vui lòng nhập người giới thiệu",
+		"fullName_empty": "Vui lòng nhập họ tên",
+		"phoneNumber_empty": "Vui lòng nhập số điện thoại",
+		"address_empty": "Vui lòng nhập địa chỉ",
+		"location_empty": "Vui lòng chọn khu vực",
+		"idCardNumber_empty": "Vui lòng nhập số CMND / Căn cước",
+		"idCardLocation_empty": "Vui lòng chọn khu vực thường trú",
+		"originMarket_empty": "Vui lòng chọn SGD xuất xứ",
+		"tradingMarket_empty": "Vui lòng chọn SGD phát triển",
+		"bankName_empty":"Vui lòng chọn ngân hàng",
+		"account_number_invalid": "Vui lòng nhập số tài khoản"
+
+	},
+	"product": {},
+	"checkout": {
+		"primaryWallet_notenough": "Ví HelpPay không đủ"
+	}
+}

@@ -1,0 +1,964 @@
+@import "const.scss";
+
+.box {
+	margin-bottom: 1rem;
+	padding: 1.5rem;
+	background-color: #fff;
+	box-shadow: 0 0 20px rgba(0, 0, 0, 0.04);
+}
+
+.page-title {
+	margin: 1rem 0;
+	color: $color_default;
+	font-size: 1.2rem;
+	text-transform: uppercase;
+}
+
+.layout-backend {
+	> .header {
+		.sider-button {
+			display: inline-flex;
+			justify-content: center;
+			align-items: center;
+			padding: 0 16px;
+			width: 52px;
+			height: 40px;
+			font-size: 16px;
+			color: $color_default;
+
+			i {
+				font-size: 1.4rem;
+			}
+		}
+
+		.site-logo {
+			display: inline-flex;
+
+			img {
+				height: 32px;
+			}
+		}
+
+		> .sider {
+			display: flex;
+			flex-direction: column;
+			padding: 0;
+			overflow: visible !important;
+
+			.sider-header {
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				height: 64px;
+				background-color: #325db3 !important;
+			}
+
+			.sider-menu {
+				flex: 1;
+				overflow-y: auto;
+				overflow-x: hidden;
+				padding: 0 0 2rem;
+				background-color: $sider_bg_color !important;
+			}
+		}
+
+		.mainbar {
+			position: relative;
+			display: flex;
+			align-items: center;
+			height: 64px;
+			background-color: #fff;
+			box-shadow: 0 0 30px rgba(0, 0, 0, 0.05);
+			flex-direction: row-reverse;
+
+			.mainbar-button {
+				display: inline-flex;
+				justify-content: center;
+				align-items: center;
+				padding: 0 20px;
+				height: 100%;
+				font-size: 16px;
+				color: $color_default;
+				white-space: nowrap;
+				cursor: pointer;
+
+				i {
+					font-size: 24px;
+				}
+
+				span {
+					padding-left: 12px;
+					text-transform: uppercase;
+				}
+
+				&.user {
+					color: $color_primary;
+				}
+			}
+
+			.wallet-list {
+				display: flex;
+				margin-left: auto;
+				height: 100%;
+
+				.wallet {
+					margin: 0 0.5rem;
+				}
+
+				.all {
+					margin-left: -10px;
+					height: 100%;
+
+					.icon {
+						display: none;
+					}
+
+					.arrow {
+						font-size: 16px;
+					}
+				}
+			}
+		}
+	}
+
+	> .main {
+		padding: 1rem;
+		background-color: #f4f4f4;
+
+		> * {
+			animation-name: pageload-kf;
+			animation-duration: 0.6s;
+		}
+	}
+}
+
+.wallet-popup {
+	padding: 1.5rem 1.5rem 1rem !important;
+
+	.label {
+		margin-bottom: 0.2rem;
+		font-weight: 500;
+	}
+
+	.main {
+		display: none;
+	}
+}
+
+.wallet {
+	display: inline-flex;
+	align-items: center;
+
+	&.helppay {
+		&:before {
+			content: "";
+			width: 32px;
+			height: 32px;
+			background-image: url(/image/wallet/helppay.png);
+			background-size: contain;
+			background-repeat: no-repeat;
+			background-position: center center;
+		}
+	}
+
+	&.helpbank {
+		&:before {
+			content: "";
+			width: 32px;
+			height: 32px;
+			background-image: url(/image/wallet/helpbank.png);
+			background-size: contain;
+			background-repeat: no-repeat;
+			background-position: center center;
+		}
+	}
+
+	i {
+		display: inline-flex;
+		justify-content: center;
+		align-items: center;
+		width: 32px;
+		height: 32px;
+		font-size: 24px;
+		color: $color_primary;
+	}
+
+	span {
+		padding-left: 0.5rem;
+		line-height: 1.4;
+		font-size: 12px;
+
+		&:before {
+			display: block;
+			content: attr(data-title);
+			font-size: 10px;
+			opacity: 0.6;
+		}
+	}
+}
+
+.header-user-info {
+	display: flex;
+	align-items: center;
+	padding: 1rem;
+	min-width: 200px;
+
+	.avatar {
+		margin-right: 1rem;
+
+		i {
+			font-size: 3rem;
+			opacity: 0.6;
+		}
+	}
+
+	.info {
+		.username {
+			font-weight: 500;
+		}
+	}
+}
+
+.register-page {
+	.page-title {
+		text-align: center;
+	}
+
+	.box {
+		margin: 0 auto;
+		max-width: 900px;
+		width: 100%;
+		padding: 2rem 2rem;
+	}
+
+	.memberType-box {
+		width: 1080px;
+		max-width: 100%;
+		margin: 1rem auto 2rem;
+
+		.memberType-list {
+			.memberType {
+				padding: 1rem;
+				width: 240px;
+				cursor: pointer;
+				// box-shadow: 0 0 30px rgba(88, 63, 63, 0.05) inset;
+				border: 1px rgba(0, 0, 0, 0.2) solid;
+				border-radius: 15px;
+				// background-color: #fff;
+				transition: all 0.3s;
+
+				.image {
+					margin-bottom: 0.5rem;
+
+					img {
+						width: 100%;
+					}
+				}
+
+				.price {
+					text-align: right;
+					color: $color_secondary;
+
+					span {
+						float: left;
+						opacity: 0.6;
+					}
+				}
+
+				.point {
+					text-align: right;
+					color: $color_primary;
+
+					span {
+						float: left;
+						opacity: 0.6;
+					}
+				}
+
+				.free {
+					text-align: center;
+				}
+
+				&:hover {
+					border-color: #888;
+				}
+			}
+
+			&.isSelected {
+				.memberType {
+					opacity: 0.3;
+
+					.image {
+						img {
+						}
+					}
+
+					&.active {
+						border-color: $border_color_secondary;
+						background-color: rgba(255, 255, 255, 0.5);
+						opacity: 1;
+					}
+				}
+			}
+		}
+
+		.errorMsg {
+			text-align: center;
+		}
+	}
+}
+
+.profile-page {
+	margin: 0 auto;
+	max-width: 1000px;
+	width: 100%;
+}
+
+.shipping-page {
+	margin: 0 auto;
+	max-width: 800px;
+	width: 100%;
+}
+
+.user-list-page {
+	.user-tree {
+		.ant-tree-indent-unit {
+			width: 32px;
+		}
+	}
+}
+
+.deposit-page {
+	margin: 0 auto;
+	max-width: 900px;
+	width: 100%;
+
+	.deposit-form {
+		margin: 0 auto;
+		max-width: 700px;
+		width: 100%;
+		padding: 2rem 0;
+		min-height: 248px;
+
+		.qrCode-box {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			min-height: 200px;
+		}
+
+		.address-box {
+			text-align: center;
+
+			.address {
+				display: inline-flex;
+				flex-wrap: wrap;
+				justify-content: center;
+				align-items: center;
+				margin: 0 auto;
+				max-width: 400px;
+				width: 100%;
+				padding: 0.5rem 0;
+				background-color: #f2f2f2;
+				cursor: pointer;
+
+				span {
+					padding: 0 0.5rem;
+					word-break: break-word;
+				}
+
+				i {
+					font-size: 1rem;
+				}
+
+				&:hover {
+					color: #000;
+					background-color: #eee;
+
+					i {
+						color: $color_primary;
+					}
+				}
+
+				&:active {
+					color: $color_primary;
+					background-color: #e4e4e4;
+
+					i {
+					}
+				}
+			}
+		}
+	}
+
+	.deposit-history {
+		padding-top: 1rem;
+	}
+}
+
+.transfer-page {
+	margin: 0 auto;
+	max-width: 600px;
+	width: 100%;
+}
+
+.bank-page {
+	margin: 0 auto;
+	max-width: 600px;
+	width: 100%;
+}
+
+.withdraw-page {
+	margin: 0 auto;
+	max-width: 1000px;
+	width: 100%;
+}
+
+.groupinfo-page {
+	flex: 1;
+
+	.group-menu {
+		margin: 1rem 0 1.5rem;
+		padding: 0;
+		list-style: none;
+		display: flex;
+		justify-content: center;
+
+		li {
+			position: relative;
+			padding: 0.5rem 2rem;
+			border-bottom: 1px #ccc solid;
+			font-size: 1.2rem;
+			color: #aaa;
+			cursor: pointer;
+			text-align: center;
+
+			&.active {
+				color: $color_primary;
+
+				&:after {
+					content: "";
+					position: absolute;
+					left: 50%;
+					top: 100%;
+					margin-left: -5px;
+					width: 0;
+					height: 0;
+					border-left: 10px solid transparent;
+					border-right: 10px solid transparent;
+					border-top: 10px solid #ccc;
+				}
+			}
+
+			&:hover {
+				color: #888;
+			}
+		}
+	}
+
+	.groupinfo {
+		margin: 1rem;
+		padding: 1rem;
+		background-color: #fff;
+
+		.group-name {
+			margin-top: 0.8rem;
+			font-size: 1.8rem;
+			color: $color_primary;
+			text-transform: uppercase;
+			font-weight: bold;
+		}
+		.group-revenue {
+			font-size: 1rem;
+			opacity: 0.7;
+		}
+
+		.top-group,
+		.group-manager {
+			margin: 1rem 0;
+
+			> .title {
+				padding: 0.5rem 0.7rem;
+				color: #fff;
+				text-transform: uppercase;
+				background-color: #2c85ce;
+			}
+
+			table {
+				th,
+				td {
+					padding: 0.5rem 0.7rem;
+				}
+				th {
+					font-weight: normal;
+					color: #888;
+				}
+				td {
+					vertical-align: middle;
+					border-top: 1px #eee solid;
+				}
+			}
+
+			.member {
+				display: flex;
+				align-items: center;
+
+				.image {
+					display: flex;
+					margin-right: 0.5rem;
+
+					i {
+						font-size: 1.3rem;
+						opacity: 0.4;
+					}
+				}
+			}
+		}
+
+		.group-manager {
+			> .title {
+				background-color: #20a88b;
+			}
+		}
+	}
+
+	.groupmember {
+		overflow: hidden;
+		position: relative;
+		min-width: 700px;
+		min-height: 700px;
+
+		.groupmember-wrap {
+			position: absolute;
+			left: 50%;
+			top: 50%;
+
+			.groupmember-content {
+				display: inline-block;
+				border-radius: 50%;
+				transform: translateX(-50%) translateY(-50%);
+
+				.member-list {
+					position: absolute;
+					z-index: 2;
+					top: 50%;
+					left: 50%;
+					transform: translateX(-50%) translateY(-50%);
+
+					.rotater {
+						position: absolute;
+						top: 0;
+						left: 0;
+						width: 100%;
+						height: 100%;
+						transform-origin: 50% 50%;
+
+						&:hover {
+							z-index: 1;
+						}
+
+						&.center {
+							width: 350%;
+							height: 350%;
+							margin-left: -125%;
+							margin-top: -125%;
+
+							.circle {
+								display: flex;
+								align-items: center;
+								justify-content: center;
+								flex-direction: column;
+								background-color: transparent;
+								border: 1px #ddd solid;
+								box-shadow: none;
+
+								.main-name {
+									line-height: 1;
+									font-size: 1.4rem;
+									font-weight: bold;
+									color: $color_primary;
+								}
+
+								.sub-name {
+									font-size: 1rem;
+									color: $color_default;
+								}
+							}
+						}
+
+						.circle {
+							overflow: hidden;
+							position: absolute;
+							top: 0;
+							left: 0;
+							width: 100%;
+							height: 100%;
+							border-radius: 50%;
+							background-color: #f9f9f9;
+							box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
+							cursor: pointer;
+
+							.item {
+								display: flex;
+								justify-content: center;
+								align-items: center;
+								position: absolute;
+								top: 50%;
+								left: 50%;
+								width: 100%;
+								height: 100%;
+								transform: translateX(-50%) translateY(-50%);
+								padding: 5px;
+								// background-image: url(/image/avatar.jpg);
+								background-size: cover;
+								background-position: center center;
+
+								i {
+									line-height: 1;
+									font-size: 24px;
+									color: #bbb;
+								}
+							}
+
+							&.company {
+								border: 3px #52c41a solid;
+							}
+						}
+					}
+				}
+
+				&.group_1 {
+					background-color: rgb(255, 255, 255);
+
+					.member-list {
+						.rotater {
+							.circle {
+								.item {
+									i {
+										font-size: 38px;
+									}
+								}
+							}
+						}
+					}
+				}
+
+				&.group_2 {
+					background-color: rgb(230, 246, 255);
+					// box-shadow: 0 0 50px rgba(0, 0, 0, 0.05);
+				}
+			}
+		}
+	}
+
+	.item-info {
+		text-align: center;
+		white-space: nowrap;
+		color: $color_default;
+
+		.image {
+			display: inline-block;
+			width: 150px;
+			height: 150px;
+		}
+
+		.userName {
+			font-weight: bold;
+		}
+	}
+
+	.group-revenue-history {
+		margin: 3rem auto;
+		padding: 2rem;
+		width: 100%;
+		max-width: 1000px;
+		background-color: #fff;
+		text-align: center;
+
+		> .title {
+			font-size: 1.4rem;
+			color: $color_primary;
+		}
+	}
+}
+
+.wallet-list-select {
+	.ant-select-selection-item {
+		span {
+			float: right;
+			font-weight: 500;
+		}
+	}
+
+	.wallet {
+		span {
+			float: right;
+			font-weight: 500;
+		}
+	}
+}
+
+.dashboard-page {
+	margin: 0 auto;
+	max-width: 700px;
+	width: 100%;
+
+	.wallet-list {
+		.wallet {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			margin-bottom: 1rem;
+			padding: 1rem;
+			background-color: #fff;
+
+			i {
+				font-size: 3.5rem;
+				opacity: 0.7;
+			}
+
+			span {
+				line-height: 1.2;
+				text-align: right;
+				font-size: 1.7rem;
+
+				&:before {
+					content: attr(data-title) " Wallet";
+					display: block;
+					font-size: 1rem;
+					opacity: 0.7;
+				}
+
+				em {
+					opacity: 0.5;
+				}
+			}
+
+			&:last-child {
+				margin-bottom: 0;
+			}
+
+			&.cash {
+				i {
+					color: #7c4400;
+				}
+			}
+
+			&.fund {
+				i {
+					color: #8f0072;
+				}
+			}
+
+			&.secondary {
+				i {
+					color: #004b7c;
+				}
+			}
+
+			&.seusd {
+				i {
+					width: 56px;
+					height: 56px;
+					background-image: url(/image/coin/seusd.png);
+					background-size: contain;
+				}
+			}
+		}
+	}
+
+	.profile {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		height: 100%;
+		text-align: center;
+
+		.avatar {
+			line-height: 1.2;
+			font-size: 5rem;
+			opacity: 0.5;
+		}
+
+		.username {
+			color: $color_primary;
+		}
+
+		.sponsor {
+			margin: 1rem 0;
+		}
+
+		.date {
+			margin-bottom: 1rem;
+		}
+	}
+}
+
+.categoryManage-page {
+	margin: 0 auto;
+	max-width: 800px;
+	width: 100%;
+}
+
+.brandManage-page {
+	margin: 0 auto;
+	max-width: 800px;
+	width: 100%;
+}
+
+.status {
+	&-1 {
+		color: #b0bd00;
+	}
+
+	&-2 {
+		color: #004bc2;
+	}
+
+	&-3 {
+		color: rgb(151, 124, 0);
+	}
+
+	&-4 {
+		color: #0b0;
+	}
+
+	&-5 {
+		color: #ee0a0a;
+	}
+}
+
+@media (min-width: 992px) {
+	.layout-backend {
+		> .header {
+			> .sider {
+				.sider-menu {
+					overflow-y: hidden;
+
+					&:hover {
+						overflow-y: auto;
+					}
+				}
+			}
+
+			.mainbar {
+				.sider-button {
+					display: none;
+				}
+
+				.search-button {
+					display: none;
+				}
+
+				.site-logo {
+					display: none;
+				}
+			}
+		}
+	}
+
+	.ds-page {
+		.dslist {
+			.ant-col {
+				flex: 0 0 20% !important;
+				max-width: 20% !important;
+			}
+		}
+	}
+}
+
+@media (max-width: 991px) {
+	.layout-backend {
+		> .header {
+			> .sider {
+				padding-bottom: 0rem !important;
+
+				.sider-menu {
+					padding-bottom: 6rem;
+				}
+			}
+
+			.mainbar {
+				padding-right: 12px;
+
+				.mainbar-button {
+					padding-left: 16px;
+					padding-right: 16px;
+
+					span {
+						display: none;
+					}
+				}
+
+				.site-logo {
+					margin-top: -0.25rem;
+
+					img {
+						height: 30px;
+					}
+				}
+
+				.wallet-list {
+					display: flex;
+					margin-left: auto;
+
+					.wallet {
+						display: none;
+					}
+
+					.all {
+						.icon {
+							display: block;
+						}
+
+						.arrow {
+							display: none;
+						}
+					}
+				}
+			}
+		}
+
+		> .main {
+			padding: 0.5rem;
+		}
+	}
+
+	.wallet-popup {
+		.main {
+			display: block;
+		}
+	}
+
+	.register-page {
+		.box {
+			padding: 1rem 0.5rem;
+		}
+
+		.memberType-list {
+			margin: 0 -16px;
+		}
+	}
+}
+
+@media (max-width: 767px) {
+	.box {
+		padding: 1rem 0.5rem;
+	}
+
+	.groupinfo-page {
+		.group-menu {
+			li {
+				flex-grow: 1;
+				padding-left: 0 !important;
+				padding-right: 0 !important;
+				font-size: 1em;
+			}
+		}
+
+		.groupinfo {
+			margin: 0 0 1rem;
+			padding: 0.5rem;
+		}
+	}
+}

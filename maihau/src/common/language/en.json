@@ -1,0 +1,59 @@
+{
+	"common": {
+		"action_completed": "Action is completed",
+		"action_confirm": "Are you sure you want to do?",
+		"action_error": "There was an error",
+		"delete_confirm": "Are you sure you want to delete?",
+		"ban_confirm": "Are you sure you want to ban?",
+		"remove_ban_confirm": "Are you sure you want to remove ban?",
+		"OK": "OK",
+		"cancel": "Cancel",
+		"close": "Close",
+		"name_empty": "Please enter name",
+		"fullName_empty": "Please enter fullname",
+		"email_empty": "Please enter email",
+		"title_empty": "Please enter title",
+		"content_empty": "Please enter content",
+		"deny_robot": "Robot doesn't allow",
+		"category_empty": "Please select category",
+		"not_exists": "Not found",
+		"value_empty": "Please enter value",
+		"value_over": "Value is over maximum",
+		"value_min": "Valus is under minimum",
+		"wallet_empty": "Please select wallet",
+		"wallet_notenough": "Wallet is not enough",
+		"btc_address_invalid": "Bitcoin address is invalid",
+		"user_notfound": "User not found",
+		"verificationCode_incorrect": "Verification code is incorrect",
+		"order_empty": "Please enter position"
+	},
+	"login": {
+		"info_incorrect": "Login info is incorrect"
+	},
+	"forgetPassword": {
+		"info_incorrect": "Forget password info is incorrect"
+	},
+	"register": {
+		"userName_invalid": "Length must be at least 6",
+		"userName_taken": "User name is taken",
+		"email_invalid": "Email is invalid",
+		"email_taken": "Email is taken",
+		"password_invalid": "Password is invalid",
+		"confirmPassword_incorrect": "Confirm password is incorrect",
+		"sponsorName_empty": "Please enter sponsor name",
+		"fullName_empty": "Please enter full name",
+		"phoneNumber_empty": "Please enter phone number",
+		"address_empty": "Please enter address",
+		"location_empty": "Please select location",
+		"bankName_empty":"Please choose a bank",
+		"account_number_invalid": "Please enter your account number"
+	},
+	"product": {
+	},
+	"checkout": {
+		"primaryWallet_notenough": "Cash wallet is not enough"
+	},
+	"digital_signature": {
+		"ds_empty": "Please select Digital Signature"
+	}
+}
