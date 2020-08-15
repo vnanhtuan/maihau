@@ -21,7 +21,7 @@ debug.log
 .env.development.local
 .env.test.local
 .env.production.local
-/*/.vs
+/*/*/.vs
 /*/.vscode
 
 npm-debug.log*
