@@ -18,7 +18,7 @@ export default class Footer extends Component {
 			this.setState({ categoryList: res.itemList ? res.itemList : [] });
 		});
 
-		HomeContentService.getList({ idList: [42], hasDescription: true }).then((res) => {
+		HomeContentService.getList({ idList: [2], hasDescription: true }).then((res) => {
 			if (!res.success) return;
 
 			this.setState({
@@ -52,6 +52,9 @@ export default class Footer extends Component {
 									</Link>
 									))
 								}
+								<Link to="/lien-he">
+										<span>Liên hệ</span>
+								</Link>
 							</div>
 						</Col>
 						<Col xs={12} sm={12} md={{ span: 12, offset: 2 }} lg={{ span: 6, offset: 0 }}>

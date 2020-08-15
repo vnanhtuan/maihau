@@ -61,6 +61,8 @@ namespace ProjectCore
             services.AddScoped<Modules.Content.CategoryPost>();
             services.AddScoped<Modules.Content.CategoryManage>();
             services.AddScoped<Modules.Content.Home>();
+            services.AddScoped<Modules.Content.Detail>();
+            services.AddScoped<Modules.Content.List>();
 
             services.AddScoped<Modules.File.Repository>();
             services.AddScoped<Modules.File.Image>();

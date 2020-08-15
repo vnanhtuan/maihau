@@ -112,7 +112,7 @@ export default class Home extends Component {
 													<span className="name">{item.name}</span>
 													<span className="saleoff">
 														<span className="price-origin">{Format.number(item.priceSource)}</span>
-														<span className="saleoff-percent">{item.saleOffPercent}</span>
+														<span className="saleoff-percent">-{item.saleOffPercent}</span>
 													</span>
 													<span className="price">{Format.number(item.price)}</span>
 												</Link>

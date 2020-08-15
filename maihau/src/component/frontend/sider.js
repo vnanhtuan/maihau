@@ -178,7 +178,7 @@ export default class Sider extends Component {
 						</Menu.Item>
 					))}
 					<Menu.Item key="000002">
-						<Link to="/contact">
+						<Link to="/lien-he">
 							<i className="icon fal fa-file"></i>
 							<span>Liên hệ</span>
 						</Link>

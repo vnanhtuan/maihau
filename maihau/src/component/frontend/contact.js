@@ -24,7 +24,7 @@ export default class Contact extends Component {
 	}
 
 	componentDidMount() {
-		HomeContentService.getList({ idList: [42], hasDescription: true }).then((res) => {
+		HomeContentService.getList({ idList: [2], hasDescription: true }).then((res) => {
 			if (!res.success) return;
 
 			this.setState({

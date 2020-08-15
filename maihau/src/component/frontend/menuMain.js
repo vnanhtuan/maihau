@@ -38,7 +38,7 @@ export default class MenuMain extends Component {
 						<span>{item.name}</span>
 					</Link>
 				))}
-				<Link to="/contact">
+				<Link to="/lien-he">
 					<i className="fal fa-question-circle"></i>
 					<span>Liên hệ</span>
 				</Link>

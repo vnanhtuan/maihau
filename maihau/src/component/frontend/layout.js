@@ -28,7 +28,7 @@ export default class Layout extends Component {
 							<Route exact path="/" component={Home} />
 							<Route path="/login/:token" component={Login} />
 							<Route path="/login" component={Login} />
-							<Route path="/contact" component={Contact} />
+							<Route path="/lien-he" component={Contact} />
 							<Route path="/chi-tiet-bai-viet/:text/:id(\d+)" component={ContentDetail} />
 							<Route path="/bai-viet/:text/:categoryId(\d+)/:pageIndex(\d+)/:orderBy" component={ContentList} />
 							<Route path="/bai-viet/:text/:categoryId(\d+)" component={ContentList} />
