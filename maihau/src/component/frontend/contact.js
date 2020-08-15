@@ -61,7 +61,7 @@ export default class Contact extends Component {
 			<section className="contact-page">
 				<div className="container">
 					<div className="map">
-						<iframe src="https://www.google.com/maps/d/u/0/embed?mid=1AKegzu7qlVS3pKpIiEcapGU1wQsrm0m-" width="100%" height="480"></iframe>
+						<iframe src="https://www.google.com/maps/d/embed?mid=1MwI6ECy0Qykcr6C0wGDuoA5hV7yOaq6i" width="100%" height="480"></iframe>
 					</div>
 					<Row gutter={64}>
 						<Col xs={24} md={12}>

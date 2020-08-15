@@ -11,7 +11,7 @@ import { siderService } from "../../common/siderBase";
 
 import { CurrentUserService } from "../user/currentUserService";
 import { LoginService } from "../user/userService";
-import { ProductHomeService } from "../product/productService";
+import { ProductHomeService, ProductURL } from "../product/productService";
 import { MenuService, ContentURL } from "../content/contentService";
 
 export default class Sider extends Component {
@@ -129,14 +129,7 @@ export default class Sider extends Component {
 											>
 												{item_2.children.map((item_3) => (
 													<Menu.Item key={item_3.key}>
-														<Link
-															to={
-																"/product/" +
-																getSlug(item_3.title) +
-																"/" +
-																item_3.value
-															}
-														>
+														<Link to={ProductURL.productListURL({}, { categoryId: item_3.value, categoryName: item_3.title })}>
 															<i className="icon fal fa-check-square"></i>
 															<span>{item_3.title}</span>
 														</Link>
@@ -145,14 +138,7 @@ export default class Sider extends Component {
 											</Menu.SubMenu>
 										) : (
 											<Menu.Item key={item_2.key}>
-												<Link
-													to={
-														"/product/" +
-														getSlug(item_2.title) +
-														"/" +
-														item_2.value
-													}
-												>
+												<Link to={ProductURL.productListURL({}, { categoryId: item_2.value, categoryName: item_2.title })}>
 													<i className="icon fal fa-check-square"></i>
 													<span>{item_2.title}</span>
 												</Link>
@@ -162,14 +148,7 @@ export default class Sider extends Component {
 								</Menu.SubMenu>
 							) : (
 								<Menu.Item key={item_1.key}>
-									<Link
-										to={
-											"/product/" +
-											getSlug(item_1.title) +
-											"/" +
-											item_1.value
-										}
-									>
+									<Link to={ProductURL.productListURL({}, { categoryId: item_1.value, categoryName: item_1.title })}>
 										<i className="icon fal fa-check-square"></i>
 										<span>{item_1.title}</span>
 									</Link>

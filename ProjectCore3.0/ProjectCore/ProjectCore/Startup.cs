@@ -1,16 +1,9 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.HttpsPolicy;
-using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Infrastructure;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using Microsoft.Extensions.Logging;
 using ProjectCore.Modules.Logs;
 
 namespace ProjectCore
@@ -59,6 +52,8 @@ namespace ProjectCore
             services.AddScoped<Modules.Product.BrandPost>();
             services.AddScoped<Modules.Product.BrandManage>();
             services.AddScoped<Modules.Product.Home>();
+            services.AddScoped<Modules.Product.List>();
+            services.AddScoped<Modules.Product.Detail>();
 
             services.AddScoped<Modules.Content.Repository>();
             services.AddScoped<Modules.Content.Post>();
@@ -80,7 +75,7 @@ namespace ProjectCore
                 app.UseDeveloperExceptionPage();
             }
 
-            //app.UseHttpsRedirection();
+            app.UseHttpsRedirection();
 
             app.UseRouting();
 

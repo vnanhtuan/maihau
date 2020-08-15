@@ -40,11 +40,13 @@ export const ProductHomeService = {
 
 export const ProductDetailService = {
 	init: async (param) => await Service.get("api/product/detail/init", param),
+	categoryGetList: async (param) => await Service.get("api/product/detail/categoryGetList", param),
 };
 
 export const ProductListService = {
 	init: async () => await Service.get("api/product/list/init"),
 	getList: async (param) => await Service.get("api/product/list/getList", param),
+	categoryGetList: async (param) => await Service.get("api/product/list/categoryGetList", param),
 };
 
 export const ProductManageService = {
